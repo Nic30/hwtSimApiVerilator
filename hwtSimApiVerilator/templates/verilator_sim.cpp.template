@@ -1,4 +1,4 @@
-#include "pycocotb_sim.h"
+#include "hwtsimapi_verilator_sim.h"
 
 // hack to allow access to V{{top_name}} private methods
 #define private friend class {{top_name}}_wrap; private

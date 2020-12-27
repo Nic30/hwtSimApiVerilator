@@ -1,6 +1,6 @@
 #pragma once
 
-#include "pycocotb_common.h"
+#include "hwtsimapi_verilator_common.h"
 #include "sim_io.h"
 
 /*

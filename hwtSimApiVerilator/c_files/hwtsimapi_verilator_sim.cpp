@@ -1,4 +1,4 @@
-#include "pycocotb_sim.h"
+#include "hwtsimapi_verilator_sim.h"
 
 int PySim_eval_event_triggers(_PySim_t<void*>* self) {
 	for (auto s : *self->event_triggering_signals) {

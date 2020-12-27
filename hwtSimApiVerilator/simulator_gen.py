@@ -46,7 +46,7 @@ IN_PLACE_LIB_DIR = os.path.abspath(
         "..",
         "build",
         f"lib.{MACHDEP:s}-{AR:s}-{VERSION:s}",
-        "pycocotb",
+        "hwtsimapi_verilator",
         "verilator"))
 INSTALLED_LIB_DIR = os.path.join(VER_SIM_GEN_BASE)
 
