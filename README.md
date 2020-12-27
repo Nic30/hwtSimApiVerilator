@@ -1,8 +1,10 @@
 # PyCOCOTB
 
-[![Build Status](https://travis-ci.org/Nic30/hwtSimApiVerilator.svg?branch=master)](https://travis-ci.org/Nic30/hwtSimApiVerilator)
+
+[![CircleCI](https://circleci.com/gh/Nic30/hwtSimApiVerilator.svg?style=svg)](https://circleci.com/gh/Nic30/hwtSimApiVerilator)
 [![Coverage Status](https://coveralls.io/repos/github/Nic30/hwtSimApiVerilator/badge.svg?branch=master)](https://coveralls.io/github/Nic30/hwtSimApiVerilator?branch=master)
 [![PyPI version](https://badge.fury.io/py/hwtSimApiVerilator.svg)](http://badge.fury.io/py/hwtSimApiVerilator)
+[![Documentation Status](https://readthedocs.org/projects/hwtsimApiverilator/badge/?version=latest)](http://hwtsimApiverilator.readthedocs.io/en/latest/?badge=latest)
 
 
 This library contains Python/C++ bindigns for Verilator RTL simulator generator and for simulator binaries generated from it.
