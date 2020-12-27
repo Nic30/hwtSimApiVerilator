@@ -1,4 +1,4 @@
-# PyCOCOTB
+# hwtSimApiVerilator
 
 
 [![CircleCI](https://circleci.com/gh/Nic30/hwtSimApiVerilator.svg?style=svg)](https://circleci.com/gh/Nic30/hwtSimApiVerilator)
