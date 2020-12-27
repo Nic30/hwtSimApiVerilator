@@ -16,6 +16,8 @@ jobs:
             gcc -v;
       - run:
           command: |
+              mkdir verilator;
+              pushd verilator;
               git clone http://git.veripool.org/git/verilator .;
               git checkout 47107a5a36e9562144ec13d4f7821942cf767b21 ;
               # fake account to apply the patches;
@@ -27,6 +29,7 @@ jobs:
               autoconf ;
               ./configure ;
               CPPFLAGS=-std=c++11 make ;
+              popd;
 
       - py/install-package-git:
           cwd: ..
