@@ -1,0 +1,2 @@
+-r https://raw.githubusercontent.com/Nic30/hwtSimApi/master/doc/requirements.txt
+git+git://github.com/Nic30/hwtSimApi.git@master#egg=hwtSimApi
