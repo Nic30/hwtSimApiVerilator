@@ -1,13 +1,13 @@
 from tempfile import TemporaryDirectory
 import unittest
 
-from pycocotb.agents.clk import ClockAgent
-from pycocotb.agents.handshaked import HandshakedAgent
-from pycocotb.agents.rst import PullUpAgent
-from pycocotb.constants import CLK_PERIOD
-from pycocotb.hdlSimulator import HdlSimulator
-from pycocotb.tests.common import build_sim
-from pycocotb.tests.verilatorHierarchy_test import VerilatorHierarchyTC
+from hwtSimApi.agents.clk import ClockAgent
+from hwtSimApi.agents.handshaked import HandshakedAgent
+from hwtSimApi.agents.rst import PullUpAgent
+from hwtSimApi.constants import CLK_PERIOD
+from hwtSimApi.hdlSimulator import HdlSimulator
+from tests.common import build_sim
+from tests.verilatorHierarchy_test import VerilatorHierarchyTC
 
 
 class HSAg(HandshakedAgent):

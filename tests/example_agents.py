@@ -1,6 +1,6 @@
-from pycocotb.hdlSimulator import HdlSimulator
-from pycocotb.process_utils import OnRisingCallbackLoop
-from pycocotb.triggers import Timer, WaitWriteOnly, WaitCombRead
+from hwtSimApi.hdlSimulator import HdlSimulator
+from hwtSimApi.process_utils import OnRisingCallbackLoop
+from hwtSimApi.triggers import Timer, WaitWriteOnly, WaitCombRead
 
 
 def get_clk_driver(sim: HdlSimulator, clk, clk_period):

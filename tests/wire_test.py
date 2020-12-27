@@ -2,10 +2,10 @@ from os.path import join
 from tempfile import TemporaryDirectory
 import unittest
 
-from pycocotb.constants import CLK_PERIOD
-from pycocotb.hdlSimulator import HdlSimulator
-from pycocotb.tests.common import build_sim
-from pycocotb.triggers import Timer, WaitCombRead, WaitWriteOnly
+from hwtSimApi.constants import CLK_PERIOD
+from hwtSimApi.hdlSimulator import HdlSimulator
+from hwtSimApi.triggers import Timer, WaitCombRead, WaitWriteOnly
+from tests.common import build_sim
 
 
 class VerilatorWireTC(unittest.TestCase):

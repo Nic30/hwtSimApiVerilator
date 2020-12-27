@@ -3,11 +3,11 @@
 
 from unittest import TestLoader, TextTestRunner, TestSuite
 
-from pycocotb.tests.verilatorCntr_test import VerilatorCntrTC
-from pycocotb.tests.verilatorHierarchy_test import VerilatorHierarchyTC
-from pycocotb.tests.wire_test import VerilatorWireTC
-from pycocotb.tests.verilatorHandshakedWire_test import VerilatorHandshakedWireTC
-from pycocotb.tests.i2c_test import I2cAgent_TC
+from tests.verilatorCntr_test import VerilatorCntrTC
+from tests.verilatorHierarchy_test import VerilatorHierarchyTC
+from tests.wire_test import VerilatorWireTC
+from tests.verilatorHandshakedWire_test import VerilatorHandshakedWireTC
+from tests.i2c_test import I2cAgent_TC
 
 
 def testSuiteFromTCs(*tcs):

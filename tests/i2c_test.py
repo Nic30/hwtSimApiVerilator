@@ -1,10 +1,11 @@
-from setuptools.py31compat import TemporaryDirectory
 import unittest
 
-from pycocotb.agents.peripheral.i2c import I2cAgent
-from pycocotb.constants import CLK_PERIOD
-from pycocotb.hdlSimulator import HdlSimulator
-from pycocotb.tests.common import build_sim
+from setuptools.py31compat import TemporaryDirectory
+
+from hwtSimApi.agents.peripheral.i2c import I2cAgent
+from hwtSimApi.constants import CLK_PERIOD
+from hwtSimApi.hdlSimulator import HdlSimulator
+from tests.common import build_sim
 
 
 class Tristate():
@@ -104,7 +105,7 @@ class I2cAgent_TC(unittest.TestCase):
 
 if __name__ == "__main__":
     suite = unittest.TestSuite()
-    #suite.addTest(I2cAgent_TC('test_simple'))
+    # suite.addTest(I2cAgent_TC('test_simple'))
     suite.addTest(unittest.makeSuite(I2cAgent_TC))
     runner = unittest.TextTestRunner(verbosity=3)
     runner.run(suite)

@@ -1,5 +1,6 @@
 from os.path import dirname, abspath, join
-from pycocotb.verilator.simulator_gen import verilatorCompile, \
+
+from hwtSimApiVerilator.simulator_gen import verilatorCompile, \
     generatePythonModuleWrapper, loadPythonCExtensionFromFile
 
 VERILOG_SRCS = dirname(abspath(__file__))
@@ -23,11 +24,11 @@ def format_accessible_signals(accessible_signals, top_name):
         if isinstance(type_width, int):
             type_width = (type_width,)
 
-        _accessible_signals.append((signal_name, signal_phy_name, read_only, is_signed, type_width))       
+        _accessible_signals.append((signal_name, signal_phy_name, read_only, is_signed, type_width))
 
     return _accessible_signals
 
-    
+
 def build_sim(verilog_files, accessible_signals, tc, build_dir, top_name):
     sim_verilog = [join(VERILOG_SRCS, f) for f in verilog_files]
     verilatorCompile(sim_verilog, build_dir)

@@ -15,7 +15,7 @@ from subprocess import check_call
 import sys
 from typing import List, Dict, Tuple
 
-from pycocotb.verilator.fs_utils import find_files, working_directory
+from hwtSimApiVerilator.fs_utils import find_files, working_directory
 
 
 VER_SIM_GEN_BASE = os.path.dirname(__file__)
@@ -25,7 +25,7 @@ VERILATOR_INCLUDE_DIR = os.path.join(VERILATOR_ROOT, "include")
 VERILATOR = "verilator_bin_dbg"
 
 template_env = Environment(
-    loader=PackageLoader("pycocotb", "verilator/templates")
+    loader=PackageLoader("hwtSimApiVerilator", "templates")
 )
 verilator_sim_wrapper_template = template_env.get_template(
     'verilator_sim.cpp.template')

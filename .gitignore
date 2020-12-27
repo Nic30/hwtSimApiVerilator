@@ -3,7 +3,7 @@
 *.a
 *.o
 .pyc
-pycocotb.egg-info
+hwtSimApiVerilator.egg-info
 build/
 dist/
 

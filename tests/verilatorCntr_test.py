@@ -2,16 +2,15 @@ from os.path import join
 from tempfile import TemporaryDirectory
 import unittest
 
-from pycocotb.agents.clk import ClockAgent
-from pycocotb.agents.rst import PullDownAgent, PullUpAgent
-from pycocotb.constants import CLK_PERIOD
-from pycocotb.hdlSimulator import HdlSimulator
-from pycocotb.tests.common import build_sim
-from pycocotb.tests.example_agents import get_clk_driver, get_rst_driver, \
+from hwtSimApi.agents.clk import ClockAgent
+from hwtSimApi.agents.rst import PullDownAgent, PullUpAgent
+from hwtSimApi.constants import CLK_PERIOD
+from hwtSimApi.hdlSimulator import HdlSimulator
+from hwtSimApi.triggers import Timer, WaitCombStable
+from tests.common import build_sim
+from tests.example_agents import get_clk_driver, get_rst_driver, \
     get_pull_up_driver, get_sync_sig_monitor, get_pull_up_driver_with_reset, \
     get_sync_pull_up_driver_with_reset
-from pycocotb.triggers import Timer, WaitCombStable
-
 
 REF_DATA = [
     (15000, 0),

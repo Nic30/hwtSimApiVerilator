@@ -51,7 +51,7 @@ install:
 - python setup.py install --verilator
 
 script:
-- coverage run --source=pycocotb -m pycocotb.tests.all
+- coverage run --source=hwtSimApiVerilator -m hwtSimApiVerilator.tests.all
 deploy:
   provider: pypi
   user: nic30
