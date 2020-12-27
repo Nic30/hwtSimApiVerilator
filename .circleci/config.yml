@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
-  py: nic30/python-all-in-1@0.2.28
+  py: nic30/python-all-in-1@0.2.29
 
 jobs:
   install-and-test:
@@ -16,6 +16,7 @@ jobs:
             gcc -v;
             free;
       - run:
+          name: Patch and install verilator.
           command: |
               mkdir verilator;
               pushd verilator;

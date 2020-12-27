@@ -6,7 +6,6 @@ from setuptools import setup, find_packages
 
 
 COCOPY_SRC_DIR = os.path.join(
-    os.path.dirname(__file__),
     "hwtSimApiVerilator", "c_files")
 COCOPY_SRCS = [os.path.join(COCOPY_SRC_DIR, p)
                for p in [
