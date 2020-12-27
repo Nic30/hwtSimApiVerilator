@@ -7,7 +7,7 @@ orbs:
 jobs:
   install-and-test:
     executor: python/default
-    resource_class: small
+    resource_class: medium
     steps:
       - checkout
       - run: sudo apt install -y boost1.67 flex bison build-essential
@@ -28,7 +28,7 @@ jobs:
               git am ../verilator_patches_tmp/*.patch ;
               autoconf ;
               ./configure ;
-              CPPFLAGS=-std=c++11 make ;
+              CPPFLAGS=-std=c++11 make -j$(nproc);
               popd;
 
       - py/install-package-git:
