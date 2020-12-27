@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
-  py: nic30/python-all-in-1@0.2.26
+  py: nic30/python-all-in-1@0.2.28
 
 jobs:
   install-and-test:
@@ -14,6 +14,7 @@ jobs:
       - run:
           command: |
             gcc -v;
+            free;
       - run:
           command: |
               mkdir verilator;
