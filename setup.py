@@ -44,8 +44,7 @@ setup(
     author_email='michal.o.socials@gmail.com',
     install_requires=[
         "jinja2",  # template engine
-        "sortedcontainers",  # for calendar queue in simulator
-        "pyMathBitPrecise>=0.8",  # bit precise integer types for sim
+        "hwtSimApi>=1.2",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",

@@ -1,0 +1,54 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+  py: nic30/python-all-in-1@0.2.26
+
+jobs:
+  install-and-test:
+    executor: python/default
+    resource_class: small
+    steps:
+      - checkout
+      - run: sudo apt install -y boost1.67 flex bison build-essential
+      - run:
+          command: |
+            gcc -v;
+      - run:
+          command: |
+              git clone http://git.veripool.org/git/verilator .;
+              git checkout 47107a5a36e9562144ec13d4f7821942cf767b21 ;
+              # fake account to apply the patches;
+              git config user.email "fake@example.com" ;
+              git config user.name "fake name";
+              git checkout . ;
+              # appply patches
+              git am ../verilator_patches_tmp/*.patch ;
+              autoconf ;
+              ./configure ;
+              CPPFLAGS=-std=c++11 make ;
+
+      - py/install-package-git:
+          cwd: ..
+          url: https://github.com/Nic30/hwtLib
+      - py/install-setup-py
+      - py/test-and-coverage:
+          testsuite: "hwtLib.tests.all"
+
+  deploy:
+    executor: python/default
+    steps:
+      - py/deploy-pypi
+
+workflows:
+  main:
+    jobs:
+      - install-and-test
+      - deploy:
+         requires:
+           - install-and-test
+         filters:
+           tags:
+             only: /v[0-9]+(\.[0-9]+)*/
+           branches:
+             ignore: /.*/
