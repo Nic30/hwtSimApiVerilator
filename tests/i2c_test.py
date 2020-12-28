@@ -1,6 +1,5 @@
+from tempfile import TemporaryDirectory
 import unittest
-
-from setuptools.py31compat import TemporaryDirectory
 
 from hwtSimApi.agents.peripheral.i2c import I2cAgent
 from hwtSimApi.constants import CLK_PERIOD
