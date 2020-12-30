@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('../'))
 # -- Project information -----------------------------------------------------
 
 project = 'hwtSimApiVerilator'
-copyright = '2017-%d, Michal Orsak' % datetime.now().year
+copyright = '2020-%d, Michal Orsak' % datetime.now().year
 author = 'Michal Orsak'
 
 
